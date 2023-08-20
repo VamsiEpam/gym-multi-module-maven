@@ -5,7 +5,7 @@ pipeline {
 		stage("Build Project") {
 			steps {
 				script {
-					def modules = ['GymApp', 'GymReportApplication','NotificationService','Eureka-Server','GatewayServer','Auth-Service']
+					def modules = ['GymReportApplication','NotificationService','Eureka-Server','GatewayServer','Auth-Service','GymApp']
 					for (def module in modules) {
 						dir("${module}") {
 							echo "Building ${module}..."
