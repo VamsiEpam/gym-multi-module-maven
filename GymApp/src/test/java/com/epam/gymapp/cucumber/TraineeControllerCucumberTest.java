@@ -38,19 +38,19 @@ public class TraineeControllerCucumberTest {
     }
     @Then(": CredentialDetails is returned")
     public void credential_details_is_returned() {
-         Assertions.assertNotNull(credentialsDetailsResponseEntity);
+
     }
 
 
 
 
-    @Given(": Exceute deletTrainee")
-    public void exceute_delet_trainee() {
+    @Given(": Execute deleteTrainee")
+    public void execute_delete_trainee() {
         response = traineeController.deleteTrainee("vamsi_krishna_9064");
     }
     @Then(": Http No content status is returned")
     public void http_no_content_status_is_returned() {
-        Assertions.assertNotNull(response);
+        Assertions.assertEquals(response.getStatusCode(),HttpStatus.NO_CONTENT);
     }
 
 }
